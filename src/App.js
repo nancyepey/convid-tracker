@@ -113,7 +113,18 @@ function App() {
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
     <div className="app">
       <GlobalStyles/>
-      <div className="app__left">
+      
+      <Card className="app__left">
+          <CardContent>
+            <h3>Live Cases by Country</h3>
+            <Table countries={tableData} />
+            <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
+            {/* Graph */}
+            <LineGraph className="app__graph" casesType={casesType} />
+        </CardContent>
+      </Card>
+
+      <div className="app__right">
         {/* Header */}
         {/* Title + Select input dropdown field */}
           <div className="app__header">
@@ -179,15 +190,6 @@ function App() {
             zoom={mapZoom}
            />
       </div>
-      <Card className="app__right">
-          <CardContent>
-            <h3>Live Cases by Country</h3>
-            <Table countries={tableData} />
-            <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
-            {/* Graph */}
-            <LineGraph className="app__graph" casesType={casesType} />
-        </CardContent>
-      </Card>
 
     </div>
     </ThemeProvider>

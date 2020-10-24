@@ -28,16 +28,16 @@ body {
   font-size: 2rem;
 }
 
-.app__left {
+.app__right {
   flex: 0.9;
 }
 
-.app__right {
+.app__left {
   display: flex;
   flex-direction: column;
 }
 
-.app__right .MuiCardContent-root {
+.app__left .MuiCardContent-root {
   flex-grow: 1;
   flex-direction: column;
   display: flex;
